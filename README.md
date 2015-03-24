@@ -6,9 +6,8 @@ Dockerhub: [thstangenberg/scala-builder][dockerhub]
 
 ## Features ##
 
-- Feature A
-- Feature B
-- Feature C
+- [Scala][SCALA]
+- [Sbt][SBT]
 
 
 ## Exposed volumes ##
@@ -28,10 +27,7 @@ None.
 
 ## Usage ##
 
-This is a template for new docker images
-See [https://github.com/phusion/baseimage-docker](https://github.com/phusion/baseimage-docker) for usage
-
-Write here what to do with it and how - example run commands
+write `image: thstangenberg/scala-builder` in your .drone.yml
 
 
 ## Build 
@@ -50,5 +46,7 @@ Make is used as build system.
 
 [Published under the MIT License][LICENSE]
 
+[SCALA]: http://www.scala-lang.org/
+[SBT]: http://www.scala-sbt.org/
 [DOCKERHUB]: https://hub.docker.com/u/thstangenberg/docker-scala-builder
 [LICENSE]: https://bitbucket.org/thstangenberg/docker-scala-builder/src/master/LICENSE.md "Published under the MIT License"

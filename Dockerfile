@@ -1,20 +1,18 @@
-FROM thstangenberg/baseimage:latest
+FROM thstangenberg/java-builder:latest
 
 MAINTAINER Thorben Stangenberg <thorben@stangenberg.net>
 
-## Do what is needed
+RUN echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 
-## set an environent variable
-#ENV name value
+RUN wget https://dl.bintray.com/sbt/debian/sbt-0.13.8.deb -O /tmp/sbt-0.13.8.deb
 
-## add files
-#ADD src dest 
+RUN sudo apt-get update
 
-## run a command 
-#RUN command
+RUN sudo apt-get install -y scala
 
-## expose a port 
-#EXPOSE port
+RUN sudo dpkg -i /tmp/sbt-0.13.8.deb
+
+RUN cd ~ && sbt
 
 # Clean up when done.
 RUN apt-get clean && \
