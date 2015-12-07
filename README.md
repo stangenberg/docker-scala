@@ -1,8 +1,9 @@
-# Docker scala-builder
+# Docker scala
 
-scala build container for drone ci
+A docker container featuring [Scala][SCALA] & [Sbt][SBT].
 
-Dockerhub: [thstangenberg/scala-builder][dockerhub]
+Dockerhub: [stangenberg/scala][dockerhub]
+
 
 ## Features ##
 
@@ -17,25 +18,26 @@ None.
 
 ## Exposed ports ##
 
-- 22 / SSH 
+- 22 / SSH
 
 
 ## Environment Variables
 
-None.
-
+- SCALA_VERSION : installed scala version
+- SBT_VERSION : installed sbt version
 
 ## Usage ##
 
-write `image: thstangenberg/scala-builder` in your .drone.yml
+### With [Drone][DRONE]
+add `image: stangenberg/scala` to your .done.yml to use the latest version.
 
 
-## Build 
+## Build
 
 Make is used as build system.
 
 - `make` / starts normal docker build.
-- `make run` / build and run the container. This uses `scala-builder` as container name and automatically stops a running container with an equal name beforehand. 
+- `make run` / build and run the container. This uses `scala` as container name and automatically stops a running container with an equal name beforehand.
 - `make bash` /  build, run the container and start a bash prompt.
 - `make ncbuild` / normal build without using the docker cache ( --no-cache ).
 
@@ -48,5 +50,5 @@ Make is used as build system.
 
 [SCALA]: http://www.scala-lang.org/
 [SBT]: http://www.scala-sbt.org/
-[DOCKERHUB]: https://hub.docker.com/u/thstangenberg/docker-scala-builder
-[LICENSE]: https://bitbucket.org/thstangenberg/docker-scala-builder/src/master/LICENSE.md "Published under the MIT License"
+[DOCKERHUB]: https://hub.docker.com/u/stangenberg/scala
+[LICENSE]: https://github.com/stangenberg/docker-scala/blob/master/LICENSE.md
