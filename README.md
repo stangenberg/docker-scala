@@ -52,3 +52,4 @@ Make is used as build system.
 [SBT]: http://www.scala-sbt.org/
 [DOCKERHUB]: https://hub.docker.com/u/stangenberg/scala
 [LICENSE]: https://github.com/stangenberg/docker-scala/blob/master/LICENSE.md
+[DRONE]: https://github.com/drone/drone
